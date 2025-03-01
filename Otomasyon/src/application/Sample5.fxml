@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane style="-fx-background-color: #f4a460;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController5">
+   <children>
+      <SplitPane dividerPositions="0.04659318637274549" layoutX="20.0" layoutY="20.0" orientation="VERTICAL" prefHeight="750.0" prefWidth="1120.0">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #ffebcd;">
+               <children>
+                  <Label fx:id="lbl_menu" layoutX="48.0" layoutY="4.0" text="Menü">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <MenuBar layoutX="174.0" layoutY="-2.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="43.0" prefWidth="946.0" style="-fx-background-color: #ffe4b5;">
+                     <menus>
+                        <Menu fx:id="menu_yardim" mnemonicParsing="false" onAction="#menu_yardim_Click" text="Yardım" />
+                        <Menu fx:id="menu_anasayfa" mnemonicParsing="false" onAction="#menu_anasayfa_Click" text="Anasayfa" />
+                     </menus>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </MenuBar>
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #fff5ee;">
+               <children>
+                  <VBox layoutY="172.0" prefHeight="533.0" prefWidth="152.0">
+                     <children>
+                        <Accordion>
+                           <panes>
+                              <TitledPane animated="false">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="83.0" prefWidth="200.0">
+                                       <children>
+                                          <Button fx:id="btn_kursiyer_list" layoutY="-1.0" mnemonicParsing="false" onAction="#btn_kursiyer_list_Click" prefHeight="42.0" prefWidth="154.0" text="Kursiyer Listele">
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="btn_kursiyer_ekle" layoutX="-3.0" layoutY="41.0" mnemonicParsing="false" onAction="#btn_kursiyer_ekle_Click" prefHeight="42.0" prefWidth="154.0" text="Kursiyer Ekle" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <graphic>
+                                    <Label prefHeight="50.0" prefWidth="115.0" text="Kursiyer İşlemleri">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </graphic>
+                              </TitledPane>
+                              <TitledPane animated="false">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="84.0" prefWidth="200.0">
+                                       <children>
+                                          <Button fx:id="btn_personel_list" mnemonicParsing="false" onAction="#btn_personel_list_Click" prefHeight="42.0" prefWidth="154.0" text="Personel Listele" />
+                                          <Button fx:id="btn_personel_ekle" layoutY="42.0" mnemonicParsing="false" onAction="#btn_personel_ekle_Click" prefHeight="42.0" prefWidth="154.0" text="Personel Ekle" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                                 <graphic>
+                                    <Label prefHeight="50.0" prefWidth="115.0" text="Personel İşlemleri" />
+                                 </graphic>
+                              </TitledPane>
+                              <TitledPane animated="false">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="165.0" prefWidth="200.0">
+                                       <children>
+                                          <Button fx:id="btn_ysinav_ekle" layoutY="41.0" mnemonicParsing="false" onAction="#btn_ysinav_ekle_Click" prefHeight="42.0" prefWidth="154.0" text="Yazılı Sınav Ekle" />
+                                          <Button fx:id="btn_usinav_list" layoutY="83.0" mnemonicParsing="false" onAction="#btn_usinav_list_Click" prefHeight="42.0" prefWidth="154.0" text="Uygulamalı Sınav Listele" />
+                                          <Button fx:id="btn_usinav_ekle" layoutY="125.0" mnemonicParsing="false" onAction="#btn_usinav_ekle_Click" prefHeight="42.0" prefWidth="154.0" text="Uygulamalı Sınav Ekle" />
+                                          <Button fx:id="btn_ysinav_list" layoutY="-1.0" mnemonicParsing="false" onAction="#btn_ysinav_list_Click" prefHeight="42.0" prefWidth="154.0" text="Yazılı Sınav Listele" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                                 <graphic>
+                                    <Label prefHeight="50.0" prefWidth="115.0" text="Sınav İşlemleri" />
+                                 </graphic>
+                              </TitledPane>
+                              <TitledPane animated="false">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="80.0" prefWidth="200.0">
+                                       <children>
+                                          <Button fx:id="btn_sinifsil" layoutY="41.0" mnemonicParsing="false" onAction="#btn_sinifsil_Click" prefHeight="42.0" prefWidth="154.0" text="Sınıf Sil" />
+                                          <Button fx:id="btn_sinifolustur" layoutY="-1.0" mnemonicParsing="false" onAction="#btn_sinifolustur_Click" prefHeight="42.0" prefWidth="152.0" text="Sınıf Oluştur" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                                 <graphic>
+                                    <Label prefHeight="50.0" prefWidth="115.0" text="Sınıf İşlemleri" />
+                                 </graphic>
+                              </TitledPane>
+                           </panes>
+                        </Accordion>
+                        <Button fx:id="btn_yonetici" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#btn_yonetici_Click" prefHeight="55.0" prefWidth="152.0" text="Yönetici İşlem" textFill="#1e1c1c" />
+                        <Button fx:id="btn_cikis" mnemonicParsing="false" onAction="#btn_cikis_Click" prefHeight="55.0" prefWidth="152.0" text="Çıkış" />
+                     </children>
+                  </VBox>
+                  <Label fx:id="baslik_lbl" layoutX="494.0" layoutY="7.0" text="Personel Tablo">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="772.0" layoutY="47.0" text="label" />
+                  <TableView fx:id="tbl_personel" layoutX="170.0" layoutY="47.0" prefHeight="607.0" prefWidth="910.0">
+                     <columns>
+                        <TableColumn fx:id="tab_TC" prefWidth="150.0" text="TC Kimlik No" />
+                        <TableColumn fx:id="tab_AD" prefWidth="150.0" text="Ad" />
+                        <TableColumn fx:id="Tab_Soyad" prefWidth="150.0" text="Soyad" />
+                        <TableColumn fx:id="tab_Statü" prefWidth="150.0" text="Statü" />
+                        <TableColumn fx:id="tab_Cepno" prefWidth="150.0" text="Cep No" />
+                        <TableColumn fx:id="tab_Belge" prefWidth="150.0" text="Belge" />
+                     </columns>
+                  </TableView>
+                  <ImageView fitHeight="158.0" fitWidth="152.0" layoutX="6.0" layoutY="7.0" />
+                  <Button fx:id="btn_sil" layoutX="978.0" layoutY="663.0" mnemonicParsing="false" onAction="#btn_sil_Click" prefHeight="32.0" prefWidth="90.0" text="Sil" />
+                  <Button fx:id="btn_guncelle" layoutX="880.0" layoutY="663.0" mnemonicParsing="false" onAction="#btn_guncelle_Click" prefHeight="32.0" prefWidth="90.0" text="Güncelle" />
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Desktop/Adsiz-tasarim-2024-10-31T204215.444.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

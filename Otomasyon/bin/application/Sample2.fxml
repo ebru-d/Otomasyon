@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: #f4a460;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController2">
+   <children>
+      <SplitPane dividerPositions="0.04659318637274549" layoutX="10.0" layoutY="10.0" orientation="VERTICAL" prefHeight="700.0" prefWidth="880.0">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <MenuBar layoutX="149.0" layoutY="-1.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="38.0" prefWidth="730.0">
+                    <menus>
+                      <Menu fx:id="menu_yardim" mnemonicParsing="false" onAction="#menu_yardim_Click" text="Yardım" />
+                      <Menu fx:id="menu_anasayfa" mnemonicParsing="false" onAction="#menu_anasayfa_Click" text="Anasayfa" />
+                    </menus>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </MenuBar>
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #fff5ee;">
+               <children>
+                  <ImageView fx:id="image_araba" fitHeight="663.0" fitWidth="730.0" layoutX="143.0" opacity="0.64" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Desktop/pngwing.com%20(1).png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="baslik_lbl" layoutX="388.0" layoutY="14.0" text="Hoşgeldiniz.">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbl_altbaslik" layoutX="342.0" layoutY="49.0" text="Lütfen yapmak istediğiniz işlemi seçiniz.">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btn_kursiyer" layoutX="25.0" layoutY="109.0" mnemonicParsing="false" onAction="#btn_kursiyer_Click" prefHeight="85.0" prefWidth="250.0" text="KURSİYER İŞLEMLERİ" />
+                  <Button fx:id="btn_personel" layoutX="314.0" layoutY="108.0" mnemonicParsing="false" onAction="#btn_personel_Click" prefHeight="86.0" prefWidth="250.0" text="PERSONEL İŞLEMLERİ" />
+                  <Button fx:id="btn_sinav" layoutX="605.0" layoutY="108.0" mnemonicParsing="false" onAction="#btn_sinav_Click" prefHeight="86.0" prefWidth="250.0" text="SINAV İŞLEMLERİ" />
+                  <Button fx:id="btn_sinif" layoutX="467.0" layoutY="227.0" mnemonicParsing="false" onAction="#btn_sinif_Click" prefHeight="86.0" prefWidth="250.0" text="SINIF İŞLEMLERİ" />
+                  <Button fx:id="btn_yonetici" layoutX="150.0" layoutY="227.0" mnemonicParsing="false" onAction="#btn_yonetici_Click" prefHeight="86.0" prefWidth="250.0" text="YÖNETİCİ İŞLEM" />
+                  <Button fx:id="btn_cikis" layoutX="784.0" layoutY="618.0" mnemonicParsing="false" onAction="#btn_cikis_Click" prefHeight="30.0" prefWidth="79.0" text="Çıkış" />
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

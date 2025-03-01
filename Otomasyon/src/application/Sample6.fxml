@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="770.0" prefWidth="1150.0" style="-fx-background-color: #fff5ee;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController6">
+   <children>
+      <SplitPane dividerPositions="0.06550802139037433" orientation="VERTICAL" prefHeight="1000.0" prefWidth="1730.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="22.0" prefWidth="1150.0" style="-fx-background-color: #ffebcd;">
+               <children>
+                  <Label fx:id="lbl_menu" layoutX="29.0" layoutY="4.0" text="Menü">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <MenuBar layoutX="167.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="47.0" prefWidth="982.0" style="-fx-background-color: #ffe4b5;">
+                     <menus>
+                        <Menu fx:id="menu_yardim" mnemonicParsing="false" onAction="#menu_yardim_Click" text="Yardım" />
+                        <Menu fx:id="menu_anasayfa" mnemonicParsing="false" onAction="#menu_anasayfa_Click" text="Anasayfa" />
+                     </menus>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </MenuBar>
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="763.0" prefWidth="1150.0" style="-fx-background-color: #fff5ee;">
+               <children>
+                  <VBox layoutX="14.0" layoutY="157.0" prefHeight="382.0" prefWidth="156.0">
+                     <children>
+                        <Accordion>
+                           <panes>
+                              <TitledPane animated="false">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="164.0" prefWidth="200.0">
+                                       <children>
+                                          <Button fx:id="btn_kursiyer_list" layoutY="-1.0" mnemonicParsing="false" onAction="#btn_kursiyer_list_Click" prefHeight="42.0" prefWidth="154.0" text="Kursiyer Listele">
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                          </Button>
+                                          
+                                          <Button fx:id="btn_kursiyer_ekle" layoutX="-3.0" layoutY="41.0" mnemonicParsing="false" onAction="#btn_kursiyer_ekle_Click" prefHeight="42.0" prefWidth="154.0" text="Kursiyer Ekle" />
+                                         
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <graphic>
+                                    <Label prefHeight="50.0" prefWidth="115.0" text="Kursiyer İşlemleri">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </graphic>
+                              </TitledPane>
+                              <TitledPane animated="false" prefHeight="492.0" prefWidth="154.0">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="164.0" prefWidth="200.0">
+                                       <children>
+                                          <Button fx:id="btn_personel_list" mnemonicParsing="false" onAction="#btn_personel_list_Click" prefHeight="42.0" prefWidth="154.0" text="Personel Listele" />
+                                        
+                                          <Button fx:id="btn_personel_ekle" layoutY="42.0" mnemonicParsing="false" onAction="#btn_personel_ekle_Click" prefHeight="42.0" prefWidth="154.0" text="Personel Ekle" />
+                                          
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                                 <graphic>
+                                    <Label prefHeight="50.0" prefWidth="115.0" text="Personel İşlemleri" />
+                                 </graphic>
+                              </TitledPane>
+                              <TitledPane animated="false">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="165.0" prefWidth="200.0">
+                                       <children>
+                                          <Button fx:id="btn_ysinav_ekle" layoutY="41.0" mnemonicParsing="false" onAction="#btn_ysinav_ekle_Click" prefHeight="42.0" prefWidth="154.0" text="Yazılı Sınav Ekle" />
+                                          <Button fx:id="btn_usinav_list" layoutY="83.0" mnemonicParsing="false" onAction="#btn_usinav_list_Click" prefHeight="42.0" prefWidth="154.0" text="Uygulamalı SInav Listele" />
+                                          <Button fx:id="btn_usinav_ekle" layoutY="125.0" mnemonicParsing="false" onAction="#btn_usinav_ekle_Click" prefHeight="42.0" prefWidth="154.0" text="Uygulamalı SInav Ekle" />
+                                          <Button fx:id="btn_ysinav_list" layoutY="-1.0" mnemonicParsing="false" onAction="#btn_ysinav_list_Click" prefHeight="42.0" prefWidth="154.0" text="Yazılı SInav Listele" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                                 <graphic>
+                                    <Label prefHeight="50.0" prefWidth="115.0" text="Sınav İşlemleri" />
+                                 </graphic>
+                              </TitledPane>
+                              <TitledPane animated="false">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="80.0" prefWidth="200.0">
+                                       <children>
+                                          <Button fx:id="btn_sinifsil" layoutY="41.0" mnemonicParsing="false" onAction="#btn_sinifsil_Click" prefHeight="42.0" prefWidth="154.0" text="Sınıf Sil" />
+                                          <Button fx:id="btn_sinifolustur" layoutY="-1.0" mnemonicParsing="false" onAction="#btn_sinifolustur_Click" prefHeight="42.0" prefWidth="152.0" text="Sınıf Oluştur" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                                 <graphic>
+                                    <Label prefHeight="50.0" prefWidth="115.0" text="Sınıf İşlemleri" />
+                                 </graphic>
+                              </TitledPane>
+                           </panes>
+                        </Accordion>
+                        <Button mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="55.0" prefWidth="175.0" text="Yönetici İşlem" textFill="#1e1c1c" />
+                        <Button mnemonicParsing="false" prefHeight="55.0" prefWidth="174.0" text="Çıkış" />
+                     </children>
+                  </VBox>
+                  <Label fx:id="baslik_lbl" layoutX="558.0" layoutY="7.0" text="Kursiyer Ekle">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="138.0" fitWidth="132.0" layoutX="21.0" layoutY="10.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../../../../Desktop/Adsiz-tasarim-2024-10-31T204215.444.png" />
+                     </image></ImageView>
+                  <TextField fx:id="txt_AD" layoutX="312.0" layoutY="181.0" prefHeight="34.0" prefWidth="214.0" />
+                  <TextField fx:id="txt_Soyad" layoutX="312.0" layoutY="249.0" prefHeight="34.0" prefWidth="214.0" />
+                  <TextField fx:id="txt_Cinsiyet" layoutX="761.0" layoutY="103.0" prefHeight="34.0" prefWidth="214.0" />
+                  <TextField fx:id="txt_Cepno" layoutX="761.0" layoutY="181.0" prefHeight="34.0" prefWidth="214.0" />
+                  <TextField fx:id="txt_TC" layoutX="312.0" layoutY="103.0" prefHeight="34.0" prefWidth="214.0" />
+                  <TextField fx:id="txt_Ucret" layoutX="762.0" layoutY="532.0" prefHeight="34.0" prefWidth="214.0" />
+                  <Label layoutX="191.0" layoutY="110.0" text="TC Kimlik No:">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="198.0" layoutY="187.0" text="Ad:">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="191.0" layoutY="255.0" text="Soyad:">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="664.0" layoutY="109.0" text="Cinsiyet:">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="674.0" layoutY="469.0" text="Belge:">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="666.0" layoutY="187.0" text="Telefon:">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btn_Ekle" layoutX="787.0" layoutY="622.0" mnemonicParsing="false" onAction="#btn_Ekle_Click" prefHeight="42.0" prefWidth="132.0" text="Ekle" />
+                  <Button fx:id="btn_Temizle" layoutX="976.0" layoutY="619.0" mnemonicParsing="false" onAction="#btn_Temizle_Click" prefHeight="42.0" prefWidth="126.0" text="Temizle" />
+                  <TextField fx:id="txt_Baba_Ad" layoutX="312.0" layoutY="324.0" prefHeight="34.0" prefWidth="214.0" />
+                  <TextField fx:id="txt_Anne_Ad" layoutX="312.0" layoutY="397.0" prefHeight="34.0" prefWidth="214.0" />
+                  <TextField fx:id="txt_Dogum_Yeri" layoutX="312.0" layoutY="463.0" prefHeight="34.0" prefWidth="214.0" />
+                  <TextField fx:id="txt_Kan" layoutX="761.0" layoutY="324.0" prefHeight="34.0" prefWidth="214.0" />
+                  <TextField fx:id="txt_Sinif" layoutX="762.0" layoutY="397.0" prefHeight="34.0" prefWidth="214.0" />
+                  <TextField fx:id="txt_Belge" layoutX="762.0" layoutY="463.0" prefHeight="34.0" prefWidth="214.0" />
+                  <DatePicker fx:id="txt_Dogum_Tarihi" layoutX="312.0" layoutY="532.0" prefHeight="34.0" prefWidth="214.0" />
+                  <DatePicker fx:id="txt_KayitTarihi" layoutX="761.0" layoutY="250.0" prefHeight="34.0" prefWidth="214.0" />
+                  <Label layoutX="195.0" layoutY="330.0" text="Baba Ad:">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="196.0" layoutY="403.0" text="Anne Ad:">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="195.0" layoutY="469.0" text="Doğum Yeri:">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="189.0" layoutY="538.0" text="Doğum Tarihi:">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="667.0" layoutY="256.0" text="Kayıt Tarihi:">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="667.0" layoutY="330.0" text="Kan Grubu:">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="670.0" layoutY="403.0" text="Sınıf:">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="672.0" layoutY="536.0" text="Kayıt Ücreti:">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbl_Mesaj" layoutX="230.0" layoutY="619.0" prefHeight="30.0" prefWidth="378.0" />
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
